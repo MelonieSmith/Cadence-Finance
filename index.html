@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Financial Superiority
+  </title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<html>
+<body>
+    <div id="puzzleOne">
+      <h1 class="highlight">Part 1 - You are 19 years old</h1>
+      <section id="intro">
+        <img src="plane.jpg" alt="plane"></img>
+        <h2>You have always dreamed of becoming a pilot. So, in your gap year, you decide to study for your recreational pilots license.
+         You join the FlyHi Flying club and enrol in their 30 week flying course. However, the fees are out of your budget.
+        FlyHi flying club will let you borrow the course fees, but will charge interest each week.
+        The value of the loan, in dollars, after <i>n</i> years, V<sub>n</sub>, can be modelled by the recurrence relation shown:</h2>
+       <h1>V<sub>0</sub> = 7200, V<sub>n+1</sub> = V<sub>n</sub>+40</h1>
+      </section>
+      <div id="puzzleOneQuestions" class="inputs">
+        <section id="questionOne" class="question">
+          <h1>What is the Principal of the loan? </h1>
+        <!--  Example: <input id="rangeOne" class="range" type="range" min="10" max="50" value="10"> -->
+          <p>$<input id="answerOne" class="question"></p>
+        </section>
+
+        <section id="questionOneb" class="question">
+          <h1>How much interest is charged each week?</h1>
+          <p>$<input id="answerOneb"></p>
+        </section>
+
+        <section id="questionTwo"class="question">
+          <h1>How much will you owe after the first week?</h1>
+          <p>$<input id="answerTwo"></p>
+        </section>
+
+        <section id="questionThree"class="question">
+          <h1>Use the recurrence relation to find the amount you will owe the FlyHi Flying club after 4 weeks.</h1>
+          <p>$<input id="answerThree"></p>
+        </section>
+
+        <section id="questionFour"class="question">
+          <h2>The rule V<sub>n</sub> = 7200 + 40<sub>n</sub> can be used to calculate the value of your loan after <i>n</i> weeks.</h2>
+          <h1>How many weeks will it take for your loan to grow to $7560?</h1>
+          <p><input id="answerFour" type = "number">weeks</p>
+        </section>
+
+        <section id="questionFive"class="question">
+          <p>After the 14th week, your parents decide to pay off the borrowed amount, $7200, as a birthday present. This leaves you able to pay what's left of the amount that you owe, which is the accumalated interest. </p>
+          <h1>How much do you pay?</h1>
+          <p>$<input id="answerFive"></p>
+        </section>
+
+        <button id="finishPuzzleOneButton">
+          Check answers
+        </button>
+        <h1 class="hide">Correct Answers!</h1>
+      </div>
+
+      <section id='finishPuzzleOne' class="question hide">
+        <p>You graduate from the course with flying colours (pun intented). However, you feel you wouldn't enjoy a career as a pilot, and therefore decide to apply for a different course at University.</p>
+        <button id= 'moveToPuzzleTwo'>
+          Well Done! Click here to move on in life.
+        </button>
+      </section>
+    </div>
+
+<!---------------------------------------------------------->
+<!-- Part 2 ------------------------------------------------>
+<!---------------------------------------------------------->
+    <div id="puzzleTwo" class = "hide">
+      <h1 class="highlight">Part 2 - You are 30 years old</h1>
+      <h2>You finally graduate University with a Doctorate degree in Biochemistry at age 30.
+         Sadly, your great-aunt Winifred loses her battle with cancer shortly after your graduation.
+         However, she leaves you $10,000 in her will. You decide to invest it in an annuity.
+         You bank has two compund interest investment options:<br>
+         A: 4.3% per annum, compounding monthly<br>
+         B: 4.5% per annum, compounding quarterly<br>
+      </h2>
+      <div id=puzzleTwoResults>
+        <section id="questionSix" class="question">
+          <h1> What is the effective interest rate for option A? Give answer to 3 significant figures.</h1>
+          <p><input id="answerSix">%</p>
+        </section>
+        <section id="questionSeven" class="question">
+          <h1> What is the effective interest rate for option B? Give answer to 3 significant figures.</h1>
+          <h2>(Then press enter)</h2>
+          <p><input id="answerSeven">%</p>
+        </section>
+      </div>
+      <div id=puzzleTwoPartTwo class = "hide" > <!-- when all solutions are correct, then remove the class hide from this-->
+        <h1>Correct Answers!</h1>
+        <section id="questionEight" class="question">
+          <h2>You plan to invest in option B, as it has a higher effective interest rate, which means higher return.
+          You wish to recieve $1220 each quarter from this annuity.</h2>
+          <h1>Which recurrence relation models this?</h1>
+          <p id="answerEight">
+          <label>
+            <input type="radio" name = "answer">
+            V<sub>0</sub> = 10000, V<sub>n+1</sub> = 1.02225V<sub>n</sub> + 1220
+          </label>
+          <br>
+          <label>
+            <input type="radio"  id="correct" name = "answer" value = "true">
+            V<sub>0</sub> = 10000, V<sub>n+1</sub> = 1.01125V<sub>n</sub> - 1220
+          </label>
+          <br>
+          <label>
+            <input type="radio" name = "answer">
+            V<sub>0</sub> = 10000, V<sub>n+1</sub> = 1.01125V<sub>n</sub> + 1220
+          </label>
+          <br>
+          <label>
+            <input type="radio" name = "answer">
+            V<sub>0</sub> = 10000, V<sub>n+1</sub> = 1.00125V<sub>n</sub> - 1220
+          </label>
+          </p>
+      </section>
+      <section id="questionNine" class="question">
+        <h1>What is the interest rate per quarter?</h1>
+        <p><input id="answerNine">%</p>
+      </section>
+
+      <section id="questionTen" class="question">
+        <h1>Using the recurrence relation, determine the balance of the annuity after 5 quarters. Give answer to 6 significant figures.</h1>
+      <p>$<input id="answerTen"></p>
+      </section>
+
+      <section id="questionEleven" class="question">
+        <h1>How long until the balance of the annuity reaches 0? Round to the nearest quarter.</h1>
+        <p><input id="answerEleven" type="number">quarters</p>
+      </section>
+
+      <section id="questionTwelve" class="question">
+        <h1>How much interest is earnt in the 4th quarter? Round answer to the nearest cent.</h1>
+        <p>$<input id="answerTwelve"></p>
+      </section>
+
+      <section id="questionThirteen" class="question">
+        <h1>What is the principal reduction in the 3rd quarter? Round answer to the nearest cent.</h1>
+        <p>$<input id="answerThirteen"></p>
+      </section>
+
+      <section id="questionFourteen" class="question">
+        <h1>Since there is no enough money in the annuity to last the full 9 quarters, what will the final payment be? Round answer to 3 significant figures</h1>
+        <p>$<input id="answerFourteen"></p>
+      </section>
+
+      <section id="questionFifteen" class="question">
+        <h2>You are about to confirm this investment option when you change your mind and would like to recieve $1830 per quarter, to allow yourself to have extra spending money. </h2>
+        <h1>How long until the balance of the annuity reaches 0 now?Round to the nearest quarter.</h1>
+        <p><input id="answerFifteen" type="number">quarters</p>
+      </section>
+      <section id="questionSixteen" class="question">
+        <h2>Your not-money-savvy boyfriend thinks it is better for the annuity to last 1 year, as the monthly payments are higher.
+           To avoid a big argument, you give in and invest the money into an annuity to last 1 year. </h2>
+        <h1>How much are you able to recieve per quarter now? Round to the nearest cent.</h1>
+        <p>$<input id="answerSixteen"></p>
+      </section>
+
+      <button id="finishPuzzleTwoButton">
+        Check answers
+      </button>
+    </div>
+
+    <h1 class = "hide">Correct Answers!</h1>
+  <section id='finishPuzzleTwo' class="hide">
+    <p class = "question">You realise you have made a mistake in dating such a narrow-minded and ignorant guy, so you break the relationship off.
+       You are thankful that you are finally rid of him, and find that you are happier now that you are no longer together.</p>
+    <button id= 'moveToPuzzleThree'>
+      Well Done! Click here to move on in life.
+    </button>
+  </section>
+</div>
+
+
+<!---------------------------------------------------------->
+<!-- Part 3 ------------------------------------------------>
+<!---------------------------------------------------------->
+
+    <div id="puzzleThree" class="hide">
+      <h1 class="highlight">Part 3 - You are now 49</h1>
+      <img src="old car.jpg" alt="your car at the moment"></img>
+      <h2 class="question">Your trusty Toyota Corolla that you drive to work was purchased second-hand 18 years ago, at $17000.
+        The value of the car after <i>n</i> years, C<sub>n</sub>, is modelled by the recurrence relation shown:<br>
+         C<sub>0</sub> = 17000, C<sub>n+1</sub> = C<sub>n</sub>-2500</h2></h2>
+
+         <section id="questionSeventeen" class="question">
+           <h1>How much did the car depreciate per year?</h1>
+           <p>$<input id="answerSeventeen"></p>
+         </section>
+
+         <section id="questionEighteen" class="question">
+           <h1>What was the annual percentage rate of depreciation? Round to 3 significant figures.</h1>
+           <p><input id="answerEighteen">%</p>
+         </section>
+
+         <section id="questionNineteen" class="question">
+           <h1>How many years did it take for the value of the car to drop below 0? Round answer to the nearest year.</h1>
+           <p><input id="answerNineteen" type="number"> years</p>
+         </section>
+         <img src="car.png" alt="the car you want to buy"></img>
+         <section id="questionTwenty" class="question">
+           <h2>Since your Toyota Corolla is so old, you decide to buy a new car. After much research, deliberation and discussion with your husband, you decide on the recently released Mersaydeez-Bends S8.
+             It is priced at $64990 drive-away, as it is one of the more higher end vehicles. You have already saved $30500 in anticipation for this purchase,
+             so you take out a loan for the rest of at an interest rate of 7.9% per annum, compounding monthly.
+             You are able to make monthly payments of $1600, which you do.<h2>
+           <h1>How many months will it take for the loan to be fully paid? Round to the nearest month.</h1>
+           <p><input id="answerTwenty">months</p>
+        </section>
+        <section id="questionTwentyOne" class="question">
+             <h2>13 months in, the bank increases their interest rate to 9.1% per annum.<h2>
+             <h1>What must your monthly payments increase by to make sure only 23 payments are required to pay off the loan? Round to the nearest cent.</h1>
+             <p>$<input id="answerTwentyOne"></p>
+        </section>
+
+         <button id="finishPuzzleThreeButton" >
+           Check answers
+         </button>
+         <h1 class="hide">Correct Answers!</h1>
+
+       <section id='finishPuzzleThree' class="question hide">
+         <p>Life is good. You have paid off your debt <i>and</i> you drive a beautiful car.</p>
+         <button id='moveToPuzzleFour'>
+           Well Done! Click here to move on in life.
+         </button>
+       </section>
+    </div>
+       <!---------------------------------------------------------->
+       <!-- Part 4 ------------------------------------------------>
+       <!---------------------------------------------------------->
+
+    <div id='puzzleFour' class="hide">
+      <h1 class="highlight">Part 4 - You are 64</h1>
+      <img src="painting.jpg" alt="beautiful painting" class = "painting"></img>
+      <h2 class="question">You come across a beautiful oil-on-canvas painting, selling for $20000. You decide to purchase this painting to sell at a profit in a few years time.
+        To do this, you take out a interest only loan. The interest on the loan is 8.5% per annum, compounding monthly.</h2>
+      <section id="questionTwentyTwo" class="question">
+        <h1>What is the monthly interest rate? Round answer to 4 significant figures.</h1>
+        <p><input id="answerTwentyTwo">%</p>
+      </section>
+
+      <section id="questionTwentyThree" class="question">
+        <h1>What is the amount of interest you are required to pay in 2 years?</h1>
+        <p>$<input id="answerTwentyThree"></p>
+      </section>
+
+      <section id="questionTwentyFour" class="question">
+        <h2>After 6 years, you decide it is time to sell the painting.</h2>
+        <h1>What is the minimum amount you must sell the painting for, in order not to lose money? </h1>
+        <p>$<input id="answerTwentyFour"></p>
+      </section>
+    </div>
+    <div id=puzzleFourPartTwo class="hide"> <!-- when all solutions are correct, then remove the class hide from this-->
+      <h1>Correct Answers!</h1>
+
+      <img src="Universitylogo.png" alt="Tazora University Logo"></img>
+      <h2 class="question">
+        At the age of 70, you feel that the end is near. You think back to decades ago, and reminisce.
+        You reflect and think about the fact that a majority of the reasons for your success was associated with Tazora University, the one you had attended all those decades ago.
+        You would like to give something back to the immensly helpful University, as well as assist under-privileged students.
+        You decide to start a perpetuity that pays for an Access scholarship for undergraduate students who are experiencing disadvantaged circumstances.</h2>
+      <section id="questionTwentyFive" class="question">
+        <h1>If you were to invest $200,000 into the perpetuity that was compounding annually,
+           what would the minimum interest rate, correct to 3 significant figures, need to be, to pay an annual prize of $10850?</h1>
+        <p><input id="answerTwentyFive">%</p>
+      </section>
+
+      <section id="questionTwentySix" class="question">
+        <h2>The best rate that the bank can offer is 4.82% per annum.</h2>
+        <h1>How much money needs to be invested in order to still pay an annual prize of $10850? Correct to the nearest cent.</h1>
+        <p>$<input id="answerTwentySix"></p>
+      </section>
+      <button id="finishPuzzleFourButton">
+        Check answers
+      </button>
+      <h1 class="hide">Correct Answers!</h1>
+
+    <section id='finishPuzzleFour' class="question hide">
+      <p>The University thanks you for creating a scholarship for future students. You are happy.</p>
+      <button id= 'moveToEnd'>
+        Well Done! Click here to move on in life.
+      </button>
+    </section>
+    </div>
+
+      <div id="final" class="hide">
+        <h1 class = "congrats">🎉Congratulations!🎊</h1>
+        <h1>You have done well. Here is a celebratory gif with a very handsome pig.<br>
+      Enjoy! You've earnt it.</h1>
+        <img src="https://media.giphy.com/media/l41Ys1fQky5raqvMQ/giphy.gif" alt="plane"></img>
+      </div>
+    <script src="script.js"></script>
+  </body>
+</html>
